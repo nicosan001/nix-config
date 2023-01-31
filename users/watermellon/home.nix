@@ -25,6 +25,14 @@
   programs.gpg = {
     enable = true;
   };
+  programs.zsh = {
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "robbyrussell";
+    };
+  };
 
   services.gpg-agent = {
     enable = true;
@@ -43,6 +51,8 @@
     git-crypt
     gnupg
     pinentry_qt
+    xclip
+    oh-my-zsh
   ];
 
   home.file = {
