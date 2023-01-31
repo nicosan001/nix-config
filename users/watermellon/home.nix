@@ -25,8 +25,8 @@
   programs.gpg = {
     enable = true;
   };
-  programs.zsh = {
 
+  programs.zsh = {
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
@@ -53,7 +53,7 @@
     pinentry_qt
     xclip
     oh-my-zsh
-  ];
+    ];
 
   home.file = {
     ".config/nvim/init.vim".text = ''
