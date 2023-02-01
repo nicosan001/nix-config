@@ -34,6 +34,15 @@
     };
   };
 
+  # buttons on bluetooth headset working
+
+  systemd.user.services.mpris-proxy = {
+    Unit.Description = "Mpris proxy";
+    Unit.After = [ "network.target" "sound.target" ];
+    Service.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+    Install.WantedBy = [ "default.target" ];
+  };
+
   services.gpg-agent = {
     enable = true;
     pinentryFlavor = "qt";
@@ -47,12 +56,14 @@
     emacsPackages.doom
     hexchat
     neofetch
+    blueman
     git
     git-crypt
     gnupg
     pinentry_qt
     xclip
     oh-my-zsh
+    libreoffice
     ];
 
   home.file = {
