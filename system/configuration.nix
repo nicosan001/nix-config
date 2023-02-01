@@ -74,6 +74,9 @@
       zsh
       gimp
       spotify
+      firefox
+      roboto
+      google-chrome
     ];
   };
 
