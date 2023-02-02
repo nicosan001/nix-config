@@ -64,6 +64,7 @@
     xclip
     oh-my-zsh
     libreoffice
+    wl-clipboard
     ];
 
   home.file = {
