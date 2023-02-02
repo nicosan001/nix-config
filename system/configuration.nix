@@ -10,6 +10,12 @@
       ./hardware-configuration.nix
     ];
 
+  # Make ready for nix flakes
+  nix.package = pkgs.nixFlakes;
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot = {
     enable = true;
