@@ -1,11 +1,34 @@
 {
-  description = "A very basic flake";
+  description = "Nix Dotfiles";
 
-  outputs = { self, nixpkgs }: {
-
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-22.11";
+    home-manager.url = "github:nix-community/home-manager/release-22.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
+
+  outputs = { nixpkgs, home-manager, ... }: 
+  let
+    system = "x86_64-linux";
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = { allowUnfree = true; };
+    };
+
+    lib = nixpkgs.lib;
+
+  in {
+    nixosConfigurations = {
+      # you will put the name of your system here
+      nixos = lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          ./system/configuration.nix
+        ];
+      };
+    };
+  };
+
 }
