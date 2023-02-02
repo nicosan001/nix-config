@@ -24,6 +24,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./users/watermellon/home.nix
+          ./users/watermellon/software.nix
           {
             home = {
               username = "watermellon";

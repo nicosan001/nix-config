@@ -16,6 +16,10 @@
   # changes in each release.
   home.stateVersion = "22.11";
 
+  imports = [
+    ./software.nix
+  ];
+
   # change shell to zsh
   programs.zsh.enable = true;
 
