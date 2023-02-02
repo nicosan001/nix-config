@@ -19,6 +19,22 @@
     lib = nixpkgs.lib;
 
   in {
+    homeManagerConfigurations = {
+      watermellon = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          ./users/watermellon/home.nix
+          {
+            home = {
+              username = "watermellon";
+              homeDirectory = "/home/watermellon";
+              stateVersion = "22.11";
+            };
+          }
+        ];
+      };
+    };
+
     nixosConfigurations = {
       # you will put the name of your system here
       nixos = lib.nixosSystem {
