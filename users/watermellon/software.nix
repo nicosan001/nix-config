@@ -26,6 +26,7 @@
         rustscan
         freshfetch
         samba # Probably not in here
+        exa
         
         # Archive Tools
         unzip

@@ -81,7 +81,7 @@
       zsh
       gimp
       spotify
-      firefox
+      firefox-wayland
       roboto
       google-chrome
     ];
