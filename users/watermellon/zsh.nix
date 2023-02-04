@@ -10,8 +10,4 @@
       theme = "robbyrussell";
     };
   };
-  ShellAliases = {
-    ls = "exa -lah --icons";
-    l = "exa -lah --icons";
-  };
 }
