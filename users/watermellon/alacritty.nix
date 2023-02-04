@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
-home.file = {
+{
+  home.file = {
     ".config/alacritty/alacritty.yaml".text = ''
 env:
   TERM: xterm-256color
@@ -151,5 +152,5 @@ debug:
   log_level: Warn
   print_events: false
     '';
-    };
+  };
 }

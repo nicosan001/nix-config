@@ -20,24 +20,14 @@
     ./software.nix
     ./neovim.nix
     ./alacritty.nix
+    ./zsh.nix
   ];
-
-  # change shell to zsh
-  programs.zsh.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   programs.gpg = {
     enable = true;
-  };
-
-  programs.zsh = {
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
   };
 
   # buttons on bluetooth headset working
