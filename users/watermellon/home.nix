@@ -18,6 +18,7 @@
 
   imports = [
     ./software.nix
+    ./neovim.nix
   ];
 
   # change shell to zsh
@@ -73,12 +74,14 @@
 
   home.file = {
     ".config/nvim/init.vim".text = ''
-      set relativenumber
+      set number relativenumber
+      set nu rnu
       set clipboard^=unnamed,unnamedplus
       set smartindent
       set tabstop=2
       set expandtab
       set shiftwidth=2
+      syntax on
     '';
     ".config/alacritty/alacritty.yaml".text = ''
 env:
