@@ -8,6 +8,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+  
+  # needed for home-manager and sway
+  security.polkit.enable = true;
+    
 
   # Make ready for nix flakes
   nix.package = pkgs.nixFlakes;

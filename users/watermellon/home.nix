@@ -23,6 +23,7 @@
     ./zsh.nix
     ./sway.nix
     ./sway-scripts.nix
+    ./sway-variables.nix
   ];
 
   # Let Home Manager install and manage itself.
