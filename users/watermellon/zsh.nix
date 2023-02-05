@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
+{ libs, config, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    meslo-lgs-nf
+  ];
   # change shell to zsh
   programs.zsh.enable = true;
 
@@ -8,10 +11,17 @@
      l = "exa -lah --icons";
      ls = "exa -lah --icons";
    };
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
+    plugins = with pkgs; [
+    {
+      file = "powerlevel10k.zsh-theme";
+      name = "powerlevel10k";
+      src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
+    }
+    {
+      file = "p10k.zsh";
+      name = "powerlevel10k-config";
+      src = ../../config/zsh/p10k;
+    }
+  ];
   };
 }

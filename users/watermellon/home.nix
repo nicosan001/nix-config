@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ libs, config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -58,7 +58,8 @@
     gnupg
     pinentry_qt
     xclip
-    oh-my-zsh
+    zplug
+    zsh-powerlevel10k
     libreoffice
     wl-clipboard
     ];
