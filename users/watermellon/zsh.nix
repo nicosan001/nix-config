@@ -18,9 +18,9 @@
       src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
     }
     {
-      file = "p10k.zsh";
       name = "powerlevel10k-config";
-      src = ../../config/zsh/p10k;
+      src = lib.cleanSource ./p10k-config;
+      file = "p10k.zsh";
     }
   ];
   };
