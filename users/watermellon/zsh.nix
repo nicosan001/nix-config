@@ -11,6 +11,9 @@
      l = "exa -lah --icons";
      ls = "exa -lah --icons";
    };
+   initExtra = ''
+   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+   '';
     plugins = with pkgs; [
     {
       file = "powerlevel10k.zsh-theme";
