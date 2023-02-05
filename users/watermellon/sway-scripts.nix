@@ -11,7 +11,7 @@ timeout 320 'swaymsg "output * dpms off"' \
 resume 'swaymsg "output * dpms on"' \
 before-sleep '~/.config/sway/scripts/lock.sh --fade-in 0'
     '';
-}
+};
 
 
   home.file = {
@@ -31,7 +31,7 @@ export MOZ_ENABLE_WAYLAND=1
 
 ## exec sway
     '';
-}
+};
 
 
   home.file = {
@@ -69,7 +69,7 @@ swaylock -d --screenshots --clock --indicator-idle-visible \
 --effect-vignette 0.5:0.5 \
 "$@"
     '';
-}
+};
 
 
   home.file = {
@@ -94,7 +94,7 @@ case $op in
                 ;;
 esac
     '';
-}
+};
 
 
   home.file = {
@@ -103,6 +103,6 @@ esac
 killall xdg-desktop-portal
 systemctl --user restart pipewire
     '';
-}
+};
 
 }
