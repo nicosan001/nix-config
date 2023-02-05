@@ -1,7 +1,7 @@
 { libs, config, pkgs, ... }:
 {
   home.file = {
-    ".config/sway.config".text = ''
+    ".config/sway/config".text = ''
 
 # Default config for sway
 #

@@ -22,6 +22,7 @@
     ./alacritty.nix
     ./zsh.nix
     ./sway.nix
+    ./sway-scripts.nix
   ];
 
   # Let Home Manager install and manage itself.
