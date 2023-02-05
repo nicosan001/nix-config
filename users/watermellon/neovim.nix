@@ -19,6 +19,11 @@
       set expandtab
       set shiftwidth=2
       set tabstop=2
+
+      " syntax and other
+      filetype plugin indent on
+      syntax on
+      set t_Co=256
     '';
   };
 }
