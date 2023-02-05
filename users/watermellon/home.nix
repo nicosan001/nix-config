@@ -20,7 +20,8 @@
     ./software.nix
     ./neovim.nix
     ./alacritty.nix
-    #./zsh.nix
+    ./zsh.nix
+    ./sway.nix
   ];
 
   # Let Home Manager install and manage itself.
